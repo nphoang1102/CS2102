@@ -1,12 +1,9 @@
 
 // Cycling result hold a time and position finished, also implements IEvent
-public class CyclingResult implements IEvent {
-	double time;
-	int position;
+public class CyclingResult extends AbsResult implements IEvent {
 	
 	CyclingResult(double time, int position) {
-		this.time = time;
-		this.position = position;
+		super(time, position);
 	}
 	
 	// Points earned for cycling result, based on time and position performance

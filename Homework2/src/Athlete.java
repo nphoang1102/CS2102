@@ -1,10 +1,12 @@
 
 // Athlete class, holds a biathlon result and a cycling result
 public class Athlete {
+	String name;
 	BiathlonResult result1;
 	CyclingResult result2;
 	
-	Athlete (BiathlonResult result1, CyclingResult result2) {
+	Athlete (String name, BiathlonResult result1, CyclingResult result2) {
+		this.name = name;
 		this.result1 = result1;
 		this.result2 = result2;
 	}
