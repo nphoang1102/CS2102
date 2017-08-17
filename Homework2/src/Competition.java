@@ -10,5 +10,10 @@ public class Competition {
 		this.rounds = rounds;
 	}
 	
+	// Check for athletes that hasn't finished all of the biathlon rounds
+	public LinkedList<Athlete> BiathlonDNF() {
+		return new LinkedList<Athlete>();
+	}
+	
 	
 }

@@ -20,10 +20,11 @@ public class BiathlonResult implements IEvent {
 	
 	// Return the best round out of the list of rounds
 	public BiathlonRound bestRound() {
-		BiathlonRound bestRound = null;
-		for (BiathlonRound r : this.rounds ) {
-			if (r.getRoundPoint() > bestRound.getRoundPoint()) bestRound = r;
+		int max_index = 0;
+		for (int i = 0; i < this.rounds.size(); i++) {
+			if (this.rounds.get(i).getRoundPoint() < this.rounds.get(max_index).getRoundPoint())
+				max_index = i;
 		}
-		return bestRound;
+		return this.rounds.get(max_index);
 	}
 }
