@@ -14,7 +14,6 @@ public class BiathlonResult implements IEvent {
 		for (BiathlonRound r : this.rounds) {
 			points += r.getRoundPoint();
 		}
-			
 		return points;
 	}
 	

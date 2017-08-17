@@ -12,8 +12,30 @@ public class Competition {
 	
 	// Check for athletes that hasn't finished all of the biathlon rounds
 	public LinkedList<Athlete> BiathlonDNF() {
-		return new LinkedList<Athlete>();
+		LinkedList<Athlete> dnfList = new LinkedList<Athlete>();
+		for (Athlete a : this.competitors) {
+			if (a.result1.rounds.size() < this.rounds) dnfList.add(a);
+		}
+		return dnfList;
 	}
 	
+	// Return the total score of the named athlete in the competition
+	public double scoreForAthlete(String name) {
+		for (Athlete a : this.competitors) {
+			if (a.name == name) return a.totalScore();
+		}
+		return 0.0;
+	}
 	
+	// Return number of athletes whose points is lower in this competition
+	public int countCyclingImproved(Competition other) {
+		int amount = 0;
+		for (Athlete a : this.competitors) {
+			for (Athlete b : other.competitors) {
+				if ((a.name.equals(b.name)) && (a.totalScore() > b.totalScore()))
+					amount++;
+			}
+		}
+		return amount;
+	}
 }

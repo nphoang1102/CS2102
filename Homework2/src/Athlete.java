@@ -5,8 +5,8 @@ public class Athlete {
 	BiathlonResult result1;
 	CyclingResult result2;
 	
-	Athlete (BiathlonResult result1, CyclingResult result2) {
-		this.name = "name";
+	Athlete (String name, BiathlonResult result1, CyclingResult result2) {
+		this.name = name;
 		this.result1 = result1;
 		this.result2 = result2;
 	}
