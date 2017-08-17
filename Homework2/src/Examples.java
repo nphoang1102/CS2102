@@ -23,9 +23,9 @@ public class Examples {
     CyclingResult cResult3 = new CyclingResult(8.4, 2); // 1.4
 
     // Test making two athlete
-    Athlete athlete1 = new Athlete("Andy", bResult1, cResult1);
-    Athlete athlete2 = new Athlete("Bob", bResult2, cResult2);
-    Athlete athlete3 = new Athlete("Chris", bResult3, cResult3);
+    Athlete athlete1 = new Athlete(bResult1, cResult1);
+    Athlete athlete2 = new Athlete(bResult2, cResult2);
+    Athlete athlete3 = new Athlete(bResult3, cResult3);
     
     // Testing the best biathlon rounds
     @Test
