@@ -9,3 +9,6 @@ Side note: I couldn't get Java up and running in a linux environment so I ended 
 
 #### Homework 1:
 Simple class nesting and interface implements, then testing with JUnit test.
+
+#### Homework 2:
+Class nesting, interface, abstract class and linked list iteration, then testing with JUnit test. I am very confused with the competition things...
