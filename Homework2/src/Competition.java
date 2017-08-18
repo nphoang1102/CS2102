@@ -31,10 +31,14 @@ public class Competition {
 	public int countCyclingImproved(Competition other) {
 		int amount = 0;
 		if (this.rounds != other.rounds) return 0;
+		LinkedList<Athlete> dnfList = this.BiathlonDNF();
 		for (Athlete a : this.competitors) {
 			for (Athlete b : other.competitors) {
 				if ((a.name.equals(b.name)) && (a.totalScore() > b.totalScore()))
 					amount++;
+					for (Athlete check : dnfList) {
+						if ((a.name.equals(check.name))) amount--;
+					}				
 			}
 		}
 		return amount;
