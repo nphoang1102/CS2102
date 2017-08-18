@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-class BMI2 {
+class BMI2 extends AbsBMI {
   BMI2(){}
   
 //  Make seperate Linked list, then join them together to a new BMI Summary object
@@ -19,10 +19,5 @@ class BMI2 {
     }
     
     return (new BMISummary(under, healthy, over, obese));
-  }
-  
-  // Method for BMI calculation
-  public double bmiCalculator(PHR file) {
-	  return file.weight/(file.height * file.height);
   }
 }

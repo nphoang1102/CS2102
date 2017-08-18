@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-class BMI1 {
+class BMI1 extends AbsBMI {
   BMI1(){}
   
   // Iterate through list of patients and add their names directly to the summary
@@ -11,12 +11,6 @@ class BMI1 {
 	}
     return summ;
   }
-  
-  // Method for BMI calculation
-  public double bmiCalculator(PHR file) {
-	  return file.weight/(file.height * file.height);
-  }
-  
   
   // Helper for sorting
   public void bmiSort(PHR file, BMISummary summ) {

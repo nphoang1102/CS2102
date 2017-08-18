@@ -6,6 +6,7 @@ public class DataSmoothExamples {
   LinkedList<PHR> PHR1 = new LinkedList<PHR>();
   LinkedList<Double> PHR1Results = new LinkedList<Double>();
   DataSmooth1 D1 = new DataSmooth1();
+  DataSmooth2 D2 = new DataSmooth2();
   
   public DataSmoothExamples() {
     // four sample PHRs
@@ -22,8 +23,13 @@ public class DataSmoothExamples {
   }
   
   @Test
-  public void instructorTestDS() {
+  public void instructorTestDS1() {
     assertEquals(PHR1Results,D1.dataSmooth(PHR1));
+  }
+  
+  @Test
+  public void instructorTestDS2() {
+    assertEquals(PHR1Results,D2.dataSmooth(PHR1));
   }
   
 }
