@@ -30,6 +30,7 @@ public class Competition {
 	// Return number of athletes whose points is lower in this competition
 	public int countCyclingImproved(Competition other) {
 		int amount = 0;
+		if (this.rounds != other.rounds) return 0;
 		for (Athlete a : this.competitors) {
 			for (Athlete b : other.competitors) {
 				if ((a.name.equals(b.name)) && (a.totalScore() > b.totalScore()))

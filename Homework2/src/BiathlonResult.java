@@ -11,6 +11,7 @@ public class BiathlonResult implements IEvent {
 	// Sum of score for each round
 	public double pointsEarned() {
 		double points = 0;
+		if (rounds.size() == 0) return Integer.MAX_VALUE;
 		for (BiathlonRound r : this.rounds) {
 			points += r.getRoundPoint();
 		}
